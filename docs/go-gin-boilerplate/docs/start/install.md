@@ -15,7 +15,7 @@ sidebar_position: 1
 ### 克隆项目
 
 ```sh
-git clone https://github.com/sanjayheaven/ggb.git
+git clone https://github.com/Xuduoteng/gomall.git
 ```
 
 ### 安装依赖
@@ -23,7 +23,7 @@ git clone https://github.com/sanjayheaven/ggb.git
 进入工作目录
 
 ```sh
-cd ggb
+cd gomall
 ```
 
 执行以下命令，安装依赖

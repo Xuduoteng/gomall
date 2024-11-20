@@ -3,9 +3,9 @@ package mysql
 import (
 	"fmt"
 
-	"github.com/sanjayheaven/ggb/configs"
-	"github.com/sanjayheaven/ggb/internal/models"
-	"github.com/sanjayheaven/ggb/internal/pkg/logger"
+	"github.com/Xuduoteng/gomall/configs"
+	"github.com/Xuduoteng/gomall/internal/models"
+	"github.com/Xuduoteng/gomall/internal/pkg/logger"
 
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"

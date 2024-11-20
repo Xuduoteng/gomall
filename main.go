@@ -3,7 +3,7 @@ package main
 import (
 	"embed"
 
-	"github.com/sanjayheaven/ggb/cmd"
+	"github.com/Xuduoteng/gomall/cmd"
 )
 
 //go:embed cmd/*
@@ -22,7 +22,7 @@ var EmbedFs embed.FS
 // @version v1.0.0
 
 // @contact.name Dorvan
-// @contact.url https://github.com/sanjayheaven
+// @contact.url https://github.com/Xuduoteng
 
 // @securityDefinitions.apikey	BearerAuth
 // @in							header

@@ -1,8 +1,8 @@
 package services
 
 import (
-	"github.com/sanjayheaven/ggb/internal/models"
-	"github.com/sanjayheaven/ggb/internal/pkg/utils"
+	"github.com/Xuduoteng/gomall/internal/models"
+	"github.com/Xuduoteng/gomall/internal/pkg/utils"
 
 	"golang.org/x/crypto/bcrypt"
 )

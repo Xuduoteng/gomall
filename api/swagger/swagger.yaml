@@ -11,7 +11,7 @@ definitions:
 info:
   contact:
     name: Dorvan
-    url: https://github.com/sanjayheaven
+    url: https://github.com/Xuduoteng
   description: This is a swagger api document for Go Gin Boilerplate.
   title: Go Gin Boilerplate API
   version: v1.0.0

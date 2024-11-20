@@ -142,7 +142,7 @@ package main
 import (
     "fmt"
 
-    "github.com/sanjayheaven/ggb/configs"
+    "github.com/Xuduoteng/gomall/configs"
 )
 
 

@@ -18,13 +18,13 @@ sidebar_position: 2.3
 package router
 
 import (
-	"github.com/sanjayheaven/ggb/internal/middlewares"
+	"github.com/Xuduoteng/gomall/internal/middlewares"
 
 	"github.com/gin-gonic/gin"
 	swaggerfiles "github.com/swaggo/files"
 	ginSwagger "github.com/swaggo/gin-swagger"
 
-	_ "github.com/sanjayheaven/ggb/api/swagger" // docs.go
+	_ "github.com/Xuduoteng/gomall/api/swagger" // docs.go
 )
 
 var Router *gin.Engine
@@ -54,9 +54,9 @@ func init() {
 
 ## 目前已有的中间件
 
-- [JWT 鉴权中间件](https://github.com/sanjayheaven/ggb/tree/main/internal/middlewares/jwt.go)
-- [跨域中间件](https://github.com/sanjayheaven/ggb/blob/main/internal/middlewares/cors.go)
-- [错误处理中间件](https://github.com/sanjayheaven/ggb/blob/main/internal/middlewares/errorHandle.go)
+- [JWT 鉴权中间件](https://github.com/Xuduoteng/gomall/tree/main/internal/middlewares/jwt.go)
+- [跨域中间件](https://github.com/Xuduoteng/gomall/blob/main/internal/middlewares/cors.go)
+- [错误处理中间件](https://github.com/Xuduoteng/gomall/blob/main/internal/middlewares/errorHandle.go)
 
 ### JWT 鉴权中间件
 

@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/sanjayheaven/ggb/configs"
-	"github.com/sanjayheaven/ggb/internal/pkg/logger"
+	"github.com/Xuduoteng/gomall/configs"
+	"github.com/Xuduoteng/gomall/internal/pkg/logger"
 
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"

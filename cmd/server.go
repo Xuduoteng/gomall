@@ -1,9 +1,10 @@
 package cmd
 
 import (
-	"github.com/sanjayheaven/ggb/configs"
-	"github.com/sanjayheaven/ggb/internal/pkg/logger"
-	"github.com/sanjayheaven/ggb/internal/router"
+	"github.com/Xuduoteng/gomall/configs"
+	"github.com/Xuduoteng/gomall/internal/pkg/logger"
+	"github.com/Xuduoteng/gomall/internal/pkg/mysql"
+	"github.com/Xuduoteng/gomall/internal/router"
 
 	"net/http"
 
@@ -49,7 +50,7 @@ func start() {
 	EnvConfig := configs.EnvConfig
 
 	// connect database
-	// mysql.Connect(&EnvConfig.Mysql)
+	mysql.Connect(&EnvConfig.Mysql)
 	// connect redis
 	// redis.Connect(&EnvConfig.Redis)
 

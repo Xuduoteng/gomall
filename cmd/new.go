@@ -5,7 +5,7 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/sanjayheaven/ggb/tools"
+	"github.com/Xuduoteng/gomall/tools"
 	"github.com/spf13/cobra"
 )
 

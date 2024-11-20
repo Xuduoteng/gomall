@@ -1,7 +1,7 @@
 package router
 
 import (
-	"github.com/sanjayheaven/ggb/internal/controllers"
+	"github.com/Xuduoteng/gomall/internal/controllers"
 
 	"github.com/gin-gonic/gin"
 )

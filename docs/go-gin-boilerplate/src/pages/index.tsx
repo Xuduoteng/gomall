@@ -102,18 +102,18 @@ export default function Home(): JSX.Element {
             <div className=" mt-4 flex items-center gap-4 mx-auto justify-center">
               <img
                 onClick={() =>
-                  window.open("https://github.com/sanjayheaven/ggb")
+                  window.open("https://github.com/Xuduoteng/gomall")
                 }
-                src="https://img.shields.io/github/stars/sanjayheaven/ggb"
+                src="https://img.shields.io/github/stars/Xuduoteng/gomall"
                 alt=""
                 className=" h-6 cursor-pointer"
               />
 
               <img
                 onClick={() =>
-                  window.open("https://github.com/sanjayheaven/ggb")
+                  window.open("https://github.com/Xuduoteng/gomall")
                 }
-                src="https://github.com/sanjayheaven/ggb/workflows/Go/badge.svg"
+                src="https://github.com/Xuduoteng/gomall/workflows/Go/badge.svg"
                 alt=""
                 className=" h-6 cursor-pointer"
               />
@@ -135,7 +135,7 @@ export default function Home(): JSX.Element {
             className=" box-border sm:w-[200px] sm:max-w-[200px] hover:shadow-xl cursor-pointer py-3 sm:py-4 px-4 sm:px-10 font-bold text-2xl 
           transition-all duration-300 bg-white rounded-md text-black no-underline
           min-w-[170px] sm:min-w-max text-center"
-            onClick={() => window.open("https://github.com/sanjayheaven/ggb")}
+            onClick={() => window.open("https://github.com/Xuduoteng/gomall")}
           >
             GitHub
           </div>
@@ -166,9 +166,9 @@ export default function Home(): JSX.Element {
                   lang="shell"
                   className=" w-full p-4 sm:p-8 bg-[#2b303b] text-white"
                 >
-                  {/* <div>git clone https://github.com/sanjayheaven/ggb.git</div> */}
-                  <div>go install github.com/sanjayheaven/ggb@latest</div>
-                  {/* <div>cd ggb </div>
+                  {/* <div>git clone https://github.com/Xuduoteng/gomall.git</div> */}
+                  <div>go install github.com/Xuduoteng/gomall@latest</div>
+                  {/* <div>cd gomall </div>
                   <div>go mod download</div> */}
                 </code>
               </div>
@@ -181,8 +181,8 @@ export default function Home(): JSX.Element {
                   lang="shell"
                   className=" w-full p-4 sm:p-8 bg-[#2b303b] text-white"
                 >
-                  <div>ggb init ggb</div>
-                  <div>cd ggb</div>
+                  <div>gomall init gomall</div>
+                  <div>cd gomall</div>
                   <div>go mod download</div>
                 </code>
               </div>

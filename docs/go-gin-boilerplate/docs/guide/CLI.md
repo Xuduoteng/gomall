@@ -24,7 +24,7 @@ func main() {
 
 ```go
 var rootCmd = &cobra.Command{
-	Use:   "ggb",
+	Use:   "gomall",
 	Short: "Go-Gin-Boilerplate is a development boilerplate based on the Gin framework, aimed at helping developers quickly build and develop web applications.",
 	Run: func(cmd *cobra.Command, args []string) {
 		fmt.Printf("%s\n", "Welcome to Go-Gin-Boilerplate. Use -h to see more commands")
@@ -66,7 +66,7 @@ func init() {
 ### 从源码安装
 
 ```sh
-go install github.com/sanjayheaven/ggb@latest
+go install github.com/Xuduoteng/gomall@latest
 ```
 
 ## 子命令
@@ -76,7 +76,7 @@ go install github.com/sanjayheaven/ggb@latest
 init 子命令用于初始化项目。
 
 ```sh
-ggb init hello
+gomall init hello
 ```
 
 这里 **hello** 为项目名称，执行命令之后，会在当前目录下创建 hello 项目。

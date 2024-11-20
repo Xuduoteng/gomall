@@ -26,13 +26,13 @@ lint:
 .PHONY: build
 # build the binary
 build: 
-	go build -v -o build/ggb main.go
+	go build -v -o build/gomall main.go
 
 
 .PHONY: cache
 # clean cache
 clean:
-	rm -rf build/ggb
+	rm -rf build/gomall
 
 .PHONY: swagger
 # swager docs generation

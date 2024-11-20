@@ -10,15 +10,15 @@ const config: Config = {
   favicon: "img/golang.png",
 
   // Set the production url of your site here
-  url: "https://sanjayheaven.github.io/",
+  url: "https://Xuduoteng.github.io/",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: "/ggb/",
+  baseUrl: "/gomall/",
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: "sanjayheaven", // Usually your GitHub org/user name.
-  projectName: "ggb", // Usually your repo name.
+  organizationName: "Xuduoteng", // Usually your GitHub org/user name.
+  projectName: "gomall", // Usually your repo name.
 
   onBrokenLinks: "ignore",
   onBrokenMarkdownLinks: "warn",
@@ -41,7 +41,7 @@ const config: Config = {
           // showLastUpdateAuthor: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          // editUrl: "https://github.com/sanjayheaven/ggb/issure",
+          // editUrl: "https://github.com/Xuduoteng/gomall/issure",
         },
         blog: {
           showReadingTime: true,
@@ -79,7 +79,7 @@ const config: Config = {
 
       { name: "twitter:card", content: "summary" },
 
-      // { name: "og:url", content: "https://github.com/sanjayheaven" },
+      // { name: "og:url", content: "https://github.com/Xuduoteng" },
     ],
     image: "img/cover.png",
     navbar: {
@@ -99,7 +99,7 @@ const config: Config = {
           position: "right",
           items: [
             {
-              href: "https://github.com/sanjayheaven/ggb",
+              href: "https://github.com/Xuduoteng/gomall",
               label: "🌟 Star on GitHub",
               target: "_blank",
             },
@@ -114,14 +114,14 @@ const config: Config = {
               target: "_blank",
             },
             {
-              href: "https://github.com/sanjayheaven/ggb/issues/new",
+              href: "https://github.com/Xuduoteng/gomall/issues/new",
               label: "🆙 Help Improve",
               target: "_blank",
             },
           ],
         },
         {
-          href: "https://github.com/sanjayheaven/ggb",
+          href: "https://github.com/Xuduoteng/gomall",
           position: "right",
           className: "header-github-link",
           "aria-label": "GitHub repository",
@@ -137,7 +137,7 @@ const config: Config = {
             { label: "Tutorial", to: "/docs/intro" },
             {
               label: "Swagger",
-              to: "https://ggb.gganbu.services/swagger/index.html",
+              to: "https://gomall.gganbu.services/swagger/index.html",
             },
           ],
         },
@@ -146,7 +146,7 @@ const config: Config = {
           items: [
             {
               label: "GitHub",
-              href: "https://github.com/sanjayheaven/ggb",
+              href: "https://github.com/Xuduoteng/gomall",
             },
             // {
             //   label: "Discord",

@@ -40,7 +40,7 @@ services:
     volumes:
       - ./:/server # mount current directory to /server, make sure your docker-compose.yml is in the root of your project
     restart: always
-    command: sh -c "make build && ./build/ggb server"
+    command: sh -c "make build && ./build/gomall server"
 ```
 
 ## 二进制文件运行
@@ -58,5 +58,5 @@ make build
 ### 执行二进制文件
 
 ```sh
-./build/ggb server
+./build/gomall server
 ```

@@ -25,8 +25,8 @@ tmp_dir = "tmp"
 
 [build]
 args_bin = []
-bin = "./tmp/ggb server"
-cmd = "go build -o ./tmp/ggb ./main.go"
+bin = "./tmp/gomall server"
+cmd = "go build -o ./tmp/gomall ./main.go"
 delay = 0
 exclude_dir = ["assets", "tmp", "vendor", "testdata"]
 exclude_file = []
@@ -87,15 +87,15 @@ make build
 或者
 
 ```sh
-go build -o build/ggb main.go
+go build -o build/gomall main.go
 ```
 
 ### 运行程序
 
-打包后的程序路径为 build/ggb, 在终端执行命令
+打包后的程序路径为 build/gomall, 在终端执行命令
 
 ```sh
-./build/ggb server
+./build/gomall server
 ```
 
 ## 查看更多命令

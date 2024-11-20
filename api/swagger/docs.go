@@ -11,7 +11,7 @@ const docTemplate = `{
         "title": "{{.Title}}",
         "contact": {
             "name": "Dorvan",
-            "url": "https://github.com/sanjayheaven"
+            "url": "https://github.com/Xuduoteng"
         },
         "version": "{{.Version}}"
     },

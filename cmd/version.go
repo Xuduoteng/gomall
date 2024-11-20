@@ -9,7 +9,7 @@ import (
 var VersionCmd = &cobra.Command{
 	Use:     "version",
 	Short:   "Get the version of Go-Gin-Boilerplate",
-	Example: "ggb version",
+	Example: "gomall version",
 	Run: func(cmd *cobra.Command, args []string) {
 		fmt.Printf(`Go-Gin-Boilerplate version: %v`, "v0.0.1")
 	},

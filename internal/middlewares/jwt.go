@@ -4,7 +4,7 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/sanjayheaven/ggb/internal/pkg/utils"
+	"github.com/Xuduoteng/gomall/internal/pkg/utils"
 
 	"github.com/gin-gonic/gin"
 )

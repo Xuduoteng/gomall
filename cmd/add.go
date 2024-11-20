@@ -22,11 +22,11 @@ func addSwagger() error {
 var AddCmd = &cobra.Command{
 	Use:     "add [component name]",
 	Short:   "Add a component to the project",
-	Example: "ggb add swagger",
+	Example: "gomall add swagger",
 	Run: func(cmd *cobra.Command, args []string) {
 		if len(args) < 1 {
 			fmt.Println("please enter component name")
-			fmt.Println("See 'ggb help add'")
+			fmt.Println("See 'gomall help add'")
 			return
 		}
 		module := args[0]

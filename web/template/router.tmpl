@@ -1,8 +1,8 @@
 package router
 
 import (
-	"github.com/sanjayheaven/ggb/internal/controllers"
-	"github.com/sanjayheaven/ggb/internal/middlewares"
+	"github.com/Xuduoteng/gomall/internal/controllers"
+	"github.com/Xuduoteng/gomall/internal/middlewares"
 
 	"github.com/gin-gonic/gin"
 )

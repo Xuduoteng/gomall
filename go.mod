@@ -1,4 +1,4 @@
-module github.com/sanjayheaven/ggb
+module github.com/Xuduoteng/gomall
 
 go 1.20
 

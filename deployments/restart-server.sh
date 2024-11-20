@@ -13,4 +13,4 @@ git pull
 docker exec go-gin-boilerplate make build
 
 # Restart the service. Here go-gin-boilerplate is the name of the container.
-docker exec go-gin-boilerplate ./build/ggb server
+docker exec go-gin-boilerplate ./build/gomall server

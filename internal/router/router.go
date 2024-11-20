@@ -1,7 +1,7 @@
 package router
 
 import (
-	"github.com/sanjayheaven/ggb/internal/middlewares"
+	"github.com/Xuduoteng/gomall/internal/middlewares"
 
 	"github.com/gin-gonic/gin"
 )

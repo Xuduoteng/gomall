@@ -9,7 +9,7 @@ import (
 	"os"
 	"regexp"
 
-	"github.com/sanjayheaven/ggb/tools"
+	"github.com/Xuduoteng/gomall/tools"
 )
 
 // replaceStrings replace strings in input string according to the replacements map

@@ -3,8 +3,8 @@ package redis
 import (
 	"fmt"
 
-	"github.com/sanjayheaven/ggb/configs"
-	"github.com/sanjayheaven/ggb/internal/pkg/logger"
+	"github.com/Xuduoteng/gomall/configs"
+	"github.com/Xuduoteng/gomall/internal/pkg/logger"
 
 	"github.com/redis/go-redis/v9"
 )

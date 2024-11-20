@@ -4,7 +4,7 @@ import (
 	"net/http"
 	"strconv"
 
-	"github.com/sanjayheaven/ggb/internal/services"
+	"github.com/Xuduoteng/gomall/internal/services"
 
 	"github.com/gin-gonic/gin"
 )
