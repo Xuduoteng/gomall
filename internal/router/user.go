@@ -12,7 +12,8 @@ func LoadUserRoutes(r *gin.Engine) *gin.RouterGroup {
 
 	user := r.Group("/users")
 	{
-		user.POST("/loginByUsernamePassword", userController.LoginByUsernamePassword)
+		user.POST("/register", userController.CreateUser)
+		user.POST("/login", userController.LoginByUsernamePassword)
 	}
 	return user
 }

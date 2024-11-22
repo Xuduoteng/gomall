@@ -17,16 +17,16 @@ type Claims struct {
 }
 
 // generate tokens used for auth
-func GenerateToken(claims *Claims) string {
+func GenerateToken(claims *Claims) (string, error) {
 	Envconfig := configs.EnvConfig
 
 	claims.ExpiresAt = jwt.NewNumericDate(time.Now().Add(time.Minute * 30)) // set expire time
 
 	token, err := jwt.NewWithClaims(jwt.SigningMethodHS256, claims).SignedString([]byte(Envconfig.Jwt.Secret))
 	if err != nil {
-		panic(err)
+		return "", err
 	}
-	return token
+	return token, nil
 }
 
 // verify token

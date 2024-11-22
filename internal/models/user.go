@@ -1,12 +1,15 @@
 package models
 
-import "time"
+import (
+	"time"
+
+	"gorm.io/gorm"
+)
 
 type User struct {
-	BasicModel
-
-	Name        string    `json:"name"`          // Name
-	Username    string    `json:"username"`      // Username
-	Password    string    `json:"password"`      // Password
-	LastLoginAt time.Time `json:"last_login_at"` // Last login time
+	gorm.Model
+	Username    string     `json:"user_name"`     // Username
+	Password    string     `json:"password"`      // Password
+	Email       string     `json:"email"`         // Email
+	LastLoginAt *time.Time `json:"last_login_at"` // Last login time
 }

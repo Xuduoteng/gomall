@@ -2,6 +2,7 @@ package controllers
 
 import (
 	"net/http"
+	"time"
 
 	"github.com/Xuduoteng/gomall/internal/services"
 
@@ -12,9 +13,50 @@ var userService = new(services.UserService)
 
 type UserController struct{}
 
+type createUserRequest struct {
+	Username string `json:"username" binding:"required,alphanum"`
+	Password string `json:"password" binding:"required,min=6"`
+	Email    string `json:"email" binding:"required,email"`
+}
+
+type createUserResponse struct {
+	Username  string    `json:"username"`
+	Email     string    `json:"email"`
+	CreatedAt time.Time `json:"created_at"`
+}
+
+func (userController *UserController) CreateUser(ctx *gin.Context) {
+	var request createUserRequest
+	if err := ctx.ShouldBindJSON(&request); err != nil {
+		ctx.JSON(http.StatusBadRequest, gin.H{"code": http.StatusBadRequest, "message": err.Error()})
+		return
+	}
+
+	user, err := userService.CreateUser(request.Username, request.Password, request.Email)
+	if err != nil {
+		ctx.JSON(http.StatusBadRequest, gin.H{"code": http.StatusBadRequest, "message": err.Error()})
+		return
+	}
+
+	response := createUserResponse{
+		Username:  user.Username,
+		Email:     user.Email,
+		CreatedAt: user.CreatedAt,
+	}
+
+	ctx.JSON(http.StatusOK, response)
+}
+
 type LoginByUsernamePasswordRequest struct {
-	Usernmae string `json:"username" default:"admin"`
-	Password string `json:"password" default:"123456"`
+	Usernmae string `json:"username" binding:"required,alphanum"`
+	Password string `json:"password" binding:"required,min=6"`
+	Email    string `json:"email" binding:"required,email"`
+}
+
+type LoginByUsernamePasswordResponse struct {
+	Usernmae  string `json:"username" binding:"required,alphanum"`
+	Email     string `json:"email" binding:"required,email"`
+	BearToken string `json:"token"`
 }
 
 // @Router /users/loginByUsernamePassword [post]
@@ -23,26 +65,28 @@ type LoginByUsernamePasswordRequest struct {
 // @Param data body LoginByUsernamePasswordRequest true "username、password"
 func (userController *UserController) LoginByUsernamePassword(ctx *gin.Context) {
 
-	data := make(map[string]interface{})
-
-	if err := ctx.ShouldBindJSON(&data); err != nil {
+	var request LoginByUsernamePasswordRequest
+	if err := ctx.ShouldBindJSON(&request); err != nil {
 		ctx.JSON(http.StatusBadRequest, gin.H{"code": http.StatusBadRequest, "message": err.Error()})
 		return
 	}
-	username := data["username"].(string)
-	password := data["password"].(string)
 
-	if username == "" || password == "" {
-		ctx.JSON(http.StatusBadRequest, gin.H{"code": http.StatusBadRequest, "message": "error param"})
+	if request.Usernmae == "" || request.Password == "" || request.Email == "" {
+		ctx.JSON(http.StatusBadRequest, gin.H{"code": http.StatusBadRequest, "message": "error request"})
 		return
 	}
 
-	token := userService.LoginByUsernamePassword(username, password)
-	if token == "" {
-		ctx.JSON(http.StatusBadRequest, gin.H{"code": http.StatusBadRequest, "message": "Username or Password Error"})
+	token, err := userService.LoginByUsernamePassword(request.Usernmae, request.Password, request.Email)
+	if err != nil {
+		ctx.JSON(http.StatusBadRequest, gin.H{"code": http.StatusBadRequest, "message": err.Error()})
 		return
 	}
+	bear_header_token := "Bearer " + token
 
-	ctx.String(http.StatusOK, token)
-
+	response := LoginByUsernamePasswordResponse{
+		Usernmae:  request.Usernmae,
+		Email:     request.Email,
+		BearToken: bear_header_token,
+	}
+	ctx.JSON(http.StatusOK, response)
 }

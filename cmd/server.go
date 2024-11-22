@@ -1,11 +1,6 @@
 package cmd
 
 import (
-	"github.com/Xuduoteng/gomall/configs"
-	"github.com/Xuduoteng/gomall/internal/pkg/logger"
-	"github.com/Xuduoteng/gomall/internal/pkg/mysql"
-	"github.com/Xuduoteng/gomall/internal/router"
-
 	"net/http"
 
 	"context"
@@ -13,6 +8,12 @@ import (
 	"os/signal"
 	"syscall"
 	"time"
+
+	"github.com/Xuduoteng/gomall/configs"
+	"github.com/Xuduoteng/gomall/internal/pkg/logger"
+	"github.com/Xuduoteng/gomall/internal/pkg/mysql"
+	"github.com/Xuduoteng/gomall/internal/router"
+	"github.com/Xuduoteng/gomall/internal/services"
 
 	"github.com/spf13/cobra"
 )
@@ -36,11 +37,6 @@ func init() {
 }
 
 func start() {
-
-	// init router
-	router.Init()
-	r := router.Router
-
 	// init logger
 	logger.Init()
 	logger := logger.LogrusLogger
@@ -51,8 +47,13 @@ func start() {
 
 	// connect database
 	mysql.Connect(&EnvConfig.Mysql)
-	// connect redis
+	// connect redi
 	// redis.Connect(&EnvConfig.Redis)
+	services.Update_db()
+
+	// init router
+	router.Init()
+	r := router.Router
 
 	// graceful shutdown
 	server := &http.Server{

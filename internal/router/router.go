@@ -21,6 +21,8 @@ func Init() {
 	// user routes
 	LoadUserRoutes(Router)
 
+	LoadProductRoutes(Router)
+
 	// example routes
 	LoadExampleRoutes(Router)
 

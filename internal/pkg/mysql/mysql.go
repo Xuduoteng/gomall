@@ -36,13 +36,16 @@ func Connect(config *configs.Mysql) *gorm.DB {
 	}
 
 	// Migrate the schema
-	migrateErr := db.AutoMigrate(&models.Example{}, &models.User{})
+	migrateErr := db.AutoMigrate(&models.Example{}, &models.User{}, &models.Product{})
 	if migrateErr != nil {
 		panic(`😫: Auto migrate failed, check your Mysql with ` + address)
 	}
 
 	// export DB
 	DB = db
+	if DB == nil {
+		panic(`😫: Export DB failed, check your Mysql with ` + address)
+	}
 
 	logger.Printf(`🍟: Successfully connected to Mysql at ` + address)
 
